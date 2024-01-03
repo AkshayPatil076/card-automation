@@ -1,1 +1,84 @@
 
+<!DOCTYPE html>
+    <html>
+        <link rel="stylesheet" href="./card.css">
+        <style>
+           body{
+            /* overflow-y: hidden; */
+            overflow-x: hidden;
+           }
+            #nav-bar{
+                background-color: rgb(214, 168, 4);
+                width: 50cm;
+                height: 2cm;
+            }
+            #num{
+                background-color: aqua;
+                padding: 20px;
+                width: 20px;
+                position: relative;
+                left: 45.5cm;
+                top: 15px;
+                text-align: center;
+            }
+            .box{
+                background-color: aqua;
+                width: 5cm;
+                height: 5cm;
+                text-align: center;
+            }
+            h1{
+                position: relative;
+                top: 1cm;
+            }
+            h3{
+                position: relative;
+                top: 2cm;
+            }
+            button{
+                position: relative;
+                bottom: 1cm;
+                cursor: pointer;
+            }
+        
+        </style>
+        <body>
+            <h1>Hello World</h1>
+            <nav id="nav-bar">
+                <div id="num"></div>
+            </nav>
+            <div id="pro"></div>
+           
+        </body>
+        <script>
+          var arr=[
+            {
+                Name:"product 1<br>",
+                Price:500,
+                val:500
+            },
+            {
+                Name:"product 2<br>",
+                Price:550,
+                val:550
+            }
+        
+          ];
+                
+           for(var i=0; i<arr.length; i++)
+           {
+            document.write("<div class='box'><h1 >"+arr[i].Name+"<h1><h3>"+arr[i].Price+"<h3><br> <button value="+arr[i].val+" id='Add'  onclick='ADD()'>ADD to Card</button> </div>");
+
+           
+
+         function ADD(){
+            for (i=0 ;i<2; i++){
+            var vvv =document.getElementById('Add').value;
+            document.getElementById('pro').innerHTML=vvv;
+            }
+         }
+
+        }
+      
+        </script>
+    </html>
